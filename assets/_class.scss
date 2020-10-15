@@ -1,0 +1,80 @@
+
+// porsche header
+$color-orange: #ff8427;
+$color-orange2: #f46a24;
+$color-dark: #4e565d;
+$color-white: #fff;
+$dark-blue: #161b3c;
+$bold: 600;
+$semi-bold: 500;
+$regular: 400;
+$light: 300;
+$primary-font: 'Poppins';
+$secondary-font: 'Oswald';
+
+%link-image {
+    width: 108px;
+    height: 85px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+%navigation {
+    right: auto;
+    left: 28%;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    height: auto;
+    min-width: 21%;
+    position: absolute;
+    top: 0;
+    transform: none;
+    width: auto;
+    z-index: 1;
+}
+
+%menu {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+%menu-item-third-level {
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%menu-item-third-level-text {
+    // color: $color-dark;
+    padding-left: 0;
+    padding-right: 30px;
+    position: relative;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    border: 0;
+    line-height: 24px;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+        text-decoration: none;
+        color: #d5001c;
+    }
+}

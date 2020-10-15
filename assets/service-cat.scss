@@ -1,0 +1,183 @@
+@import 'variable', 'fonts', 'mixin', 'common', 'header', 'footer';
+
+.service {
+  position: relative;
+  height: 100vh;
+
+  &-img {
+    @include tablet-landscape {
+      display: none;
+    }
+  }
+
+  &-content {
+    text-align: center;
+
+    @include tablet-landscape {
+      text-align: left;
+      padding: 0 3rem;
+    }
+
+    @include tablet {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 19rem;
+      color: lighten($color: $color-dark, $amount: 50);
+      margin-bottom: 3rem;
+
+      @include tablet-landscape {
+        font-size: 15rem;
+      }
+
+      @include mobile {
+        font-size: 10rem;
+      }
+    }
+
+    h3 {
+      font-size: 4rem;
+      color: $dark-blue;
+      font-weight: $regular;
+      margin-bottom: 2rem;
+
+      b {
+        font-weight: $bold;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $color-dark;
+    }
+  }
+
+  &-details {
+    @extend %section-padding;
+    background-color: darken($color: $color-white, $amount: 3);
+
+    .container {
+      @include tablet {
+        max-width: 100% !important;
+      }
+
+      .row {
+        .col-md-3 {
+          @include tablet {
+            padding: 0;
+          }
+        }
+
+        .col-lg-12 {
+          @include tablet {
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    &-box {
+      position: relative;
+      height: 60rem;
+      display: block;
+      margin-bottom: 3rem;
+
+      @include tablet-landscape {
+        height: 50rem;
+      }
+
+      @include tablet {
+        height: 60rem;
+      }
+
+      &::before {
+        @extend %before-after;
+        background-color: $color-orange;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+      }
+
+      &:hover {
+        &::before {
+          opacity: .6;
+        }
+      }
+
+    }
+
+    &-img {
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+
+        @include tablet {
+          object-position: center;
+        }
+      }
+    }
+
+    &-item {
+      position: absolute;
+      height: 100%;
+      z-index: 999;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      padding: 3rem 1.5rem;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+
+      p {
+        font-weight: $semi-bold;
+        font-size: 3.2rem;
+        @extend %font-secondary;
+      }
+
+      i {
+        font-size: 3.2rem;
+      }
+    }
+
+    .white-text {
+      p {
+        color: $color-white;
+        font-weight: $bold;
+      }
+
+      i {
+        color: $color-white;
+      }
+    }
+
+    .dark-text {
+      p {
+        color: $color-dark;
+      }
+
+      i {
+        color: $color-dark;
+      }
+    }
+
+    .last {
+      padding: 3rem 10rem;
+      justify-content: center;
+
+      @include tablet {
+        padding: 3rem 1.5rem;
+      }
+
+      p {
+        font-size: 5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,266 @@
+/* Medium Layout: 1280px. */
+@media only screen and (max-width: 767px) { 
+  .main-container {
+      overflow: hidden;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+  }
+  .second-section {
+    overflow: hidden;
+}
+  .second-section .second-container {
+    width: 100%;
+     padding-right: 0px; 
+    padding-left: 0px; 
+}
+  .third-section {
+    overflow: hidden;
+}
+  .third-section .third-container {
+    width: 100%;
+    padding-right: 0px; 
+    padding-left: 0px; 
+}
+  /* .main-container .boxes {
+      padding: 30px 42px;
+  } */
+  .main-container .boxes {
+    padding: 30px 3px;
+}
+.single-box-content.section-six-box-content {
+    margin-top: -37px;
+}
+.single-box-content.section-six-box-content .single-box-content-bottom .button a {
+        font-size: 11px;
+}
+.single-box-content.section-six-box-content .single-box-content-bottom .button {
+    padding: 1px 13px;
+}
+  .second-section .second-container .demo-box-area .demo-content-relative .demo-image {
+      z-index: 0; 
+      margin-left: 0px;
+      position: inherit; 
+      top: 0px; 
+  }
+  .second-section .second-container .demo-box-area .demo-content-relative .demo-image .demo-image-content {
+      
+      right: 0%; 
+      top: 113%;
+      left: 21px;
+  }
+  .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image .demo-image-content-third{
+      right: 0%; 
+      top: 113%;
+      left: 21px;
+  }
+  .servece_title, .single-serveice-box-left .single-serveice-box-left-content h2, .single-serveice-box-left.single-serveice-box-two .single-serveice-box-left-content h2, .single-serveice-box-left.single-serveice-box-three .single-serveice-box-left-content h2, .single-serveice-box-left.single-serveice-box-four .single-serveice-box-left-content h2 {
+    font-size: 44.1px;
+}
+.single-serveice-box-right .service-box-pera h3 {
+    padding: 0px;
+    left: 14%;
+}
+  .demo-content .lookbook-text, .second-section .second-container .demo-box-area .demo-content-relative .demo-content .lookbook-text, .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third .lookbook-text {
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+  .second-section .second-container .demo-box-area .demo-content-relative {
+      background-color: #fff;
+  }
+  .second-section .second-container .demo-box-area {
+    background-color: transparent;
+    padding: 10px 10px;
+}
+  .demo-content, .second-section .second-container .demo-box-area .demo-content-relative .demo-content {
+    margin-top: 127px;
+    margin-left: 0px;
+    padding: 13px 20px 0px 20px;
+    background-color: transparent;
+}
+  .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third {
+    margin-top: 190px;
+    padding: 9px 20px 0px 20px;
+    margin-left: 0px;
+}
+  .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image {
+      z-index: 0;
+      position: inherit;
+      margin-left: 0px; 
+  }
+  .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image .demo-image-content-third h2 {
+      font-size: 78px;
+  }
+  .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image .demo-image-content-third p {
+      font-size: 20px;
+  }
+  .second-section .second-container .demo-box-area .demo-content-relative .demo-image .demo-image-content h2 {
+      font-size: 30px;
+  }
+  .demo-content .author-content .author-text h6, .second-section .second-container .demo-box-area .demo-content-relative .demo-content .author-content .author-text h6, .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third .author-content .author-text h6 {
+      font-size: 15px;
+  }
+  .third-section .third-container .demo-box-area-third {
+      background-color: #fff;
+  }
+  .single-serveice-box-right .single-serveice-right-content {
+      position: inherit; 
+      top: 0; 
+      padding: 43px 20px;
+      margin-bottom: 10px;
+  }
+  .section-title-area {
+      flex-wrap: wrap;
+      margin-bottom: 0px;
+      margin-top: 70px;
+  }
+  .section-title-area img {
+      margin-bottom: 30px;
+  }
+  .demo-content .author-content, .second-section .second-container .demo-box-area .demo-content-relative .demo-content .author-content, .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third .author-content {
+      display: flex;
+      justify-content: flex-start;
+  }
+  .single-box-content.section-six-box-content p {
+    line-height: 40px !important;
+    font-size: 25px !important;
+}
+
+
+
+
+
+
+
+
+  }
+  /* Mobile Layout: 320px. */
+  @media only screen and (min-width: 992px) and (max-width: 1200px) { 
+      .second-section .second-container{
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+      .third-section .third-container {
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+
+  }
+  /* Wide Mobile Layout: 480px. */
+  @media only screen and (min-width: 480px) and (max-width: 767px) { 
+      .second-section .second-container{
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+      .third-section .third-container {
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+      .main-container .boxes {
+          padding: 30px 42px;
+      }
+      .second-section .second-container .demo-box-area .demo-content-relative .demo-image {
+          margin-left: 0px;
+          z-index: 0;
+          position: inherit;
+          top: 0px;
+      }
+
+  }
+
+
+    /* Wide Mobile Layout: 480px. */
+    @media only screen and (max-width: 991px) and (min-width: 768px) {
+
+      .second-section .second-container {
+          width: 1140px;
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+      }
+      .third-section .third-container {
+          width: 100%;
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+      } 
+          .main-container .boxes {
+          padding: 30px 42px;
+      }
+      .second-section .second-container .demo-box-area .demo-content-relative .demo-image {
+          z-index: 0; 
+          margin-left: 0px;
+          position: inherit; 
+          top: 0px; 
+      }
+      .second-section .second-container .demo-box-area .demo-content-relative .demo-image .demo-image-content ,.third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image .demo-image-content-third{
+          
+          right: 0%; 
+          top: 113%;
+          left: 15px;
+      }
+      .demo-content, .second-section .second-container .demo-box-area .demo-content-relative .demo-content {
+          margin-top: 127px;
+          margin-left: 0px;
+          padding: 48px 0px 0px 20px;
+          background-color: transparent;
+      }
+      .demo-content, .second-section .second-container .demo-box-area .demo-content-relative .demo-content, .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third{
+          margin-top: 90px;
+          margin-left: 0px;
+          padding: 48px 0px 0px 20px;
+          background-color: transparent;
+      }
+      .demo-content .lookbook-text, .second-section .second-container .demo-box-area .demo-content-relative .demo-content .lookbook-text, .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third .lookbook-text {
+          margin-left: 0px;
+          margin-right: 0px;
+      }
+
+      .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image {
+          z-index: 0; 
+          margin-left: 0px;
+          position: inherit; 
+          top: 0px; 
+      }
+      .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image .demo-image-content-third p {
+          font-size: 20px;
+      }
+      .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-image .demo-image-content-third h2 {
+          font-size: 90px;
+      }
+      .demo-content .author-content .author-text h6, .second-section .second-container .demo-box-area .demo-content-relative .demo-content .author-content .author-text h6, .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third .author-content .author-text h6 {
+          font-size: 15px;
+      }
+      .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third .author-content.flex-end {
+          justify-content: left;
+          position: absolute;
+          top: 24px;
+          right: 34px;
+      }
+      .third-section .third-container .demo-box-area-third .demo-content-relative-third .demo-content-third .lookbook-text {
+          margin-top: 141px;
+      }
+      .section-title-area {
+          flex-flow: wrap;
+      }
+      .section-title-area p {
+          margin-top: 20px;
+      }
+}
+

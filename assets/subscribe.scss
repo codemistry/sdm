@@ -1,0 +1,24 @@
+@import 'variable', 'fonts', 'mixin', 'common', 'header', 'footer';
+
+.footer {
+  video {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &-top {
+    height: 150vh;
+    background-image: none;
+
+    .contact-form {
+      top: 0;
+    }
+  }
+
+  &-center {
+    padding: 10rem 0;
+  }
+}

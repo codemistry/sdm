@@ -1,0 +1,274 @@
+@import 'variable', 'fonts', 'mixin', 'common', 'header', 'footer';
+
+.divider {
+  padding: 5rem 0;
+
+  .line {
+    background-color: lighten($color: $color-dark, $amount: 50);
+    height: .1rem;
+    width: 100%;
+  }
+
+  .icon {
+    padding: 0 1rem;
+
+    i {
+      font-size: 3.99rem;
+      color: $dark-blue;
+    }
+  }
+}
+
+.brand-cat {
+  position: relative;
+  height: 100vh;
+  margin-bottom: 10rem;
+
+  &-img {
+    @include tablet-landscape {
+      display: none;
+    }
+  }
+
+  &-content {
+    text-align: center;
+
+    @include tablet-landscape {
+      text-align: left;
+      padding: 0 3rem;
+    }
+
+    @include tablet {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 19rem;
+      color: lighten($color: $color-dark, $amount: 50);
+      margin-bottom: 3rem;
+      font-weight: $light;
+
+      @include tablet-landscape {
+        font-size: 15rem;
+      }
+
+      @include mobile {
+        font-size: 10rem;
+      }
+    }
+
+    h3 {
+      font-size: 4rem;
+      color: $dark-blue;
+      font-weight: $regular;
+      margin-bottom: 2rem;
+
+      b {
+        font-weight: $bold;
+      }
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $color-dark;
+    }
+  }
+
+  &-2 {
+    @extend %section-padding;
+    background-color: darken($color: $color-white, $amount: 3);
+
+    &-logo {
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &-left {
+      .title {
+        font-size: 3rem;
+        color: $dark-blue;
+        font-weight: $light;
+        letter-spacing: .6rem;
+        text-transform: uppercase;
+        line-height: 3.6rem;
+        padding: .5rem 0;
+      }
+
+      .des {
+        color: $color-dark;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        padding: .5rem 0;
+        line-height: 2.21rem;
+      }
+    }
+
+    &-right {
+      .top {
+        font-size: 2rem;
+        color: $dark-blue;
+        letter-spacing: .6rem;
+        line-height: 1.2;
+      }
+
+      .center {
+        font-size: 13rem;
+        font-family: $primary-font;
+        color: $dark-blue;
+        line-height: 10.8rem;
+      }
+
+      .bottom {
+        line-height: 1.95rem;
+        color: lighten($color: $color-dark, $amount: 20);
+        font-size: 1.3rem;
+        letter-spacing: .2rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  &-banner {
+    width: 100%;
+    height: 80vh;
+    background-image: url('../Images/brand-categories/bg-s.jpg');
+    background-size: cover;
+
+    &-content {
+      height: 100%;
+
+      h2 {
+        color: $color-white;
+        font-size: 4rem;
+        line-height: 4.8rem;
+
+        b {
+          font-weight: $bold;
+        }
+
+        span {
+          font-weight: $light;
+        }
+      }
+
+      .des {
+        margin: 20px 0px 10px;
+
+        p {
+          font-weight: $semi-bold;
+          font-size: 1.3rem;
+          letter-spacing: .2rem;
+          line-height: 1.56rem;
+          margin-bottom: 0;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  &-title {
+    padding: 5rem;
+    text-align: center;
+
+    h3 {
+      color: $dark-blue;
+      letter-spacing: .5rem;
+      text-transform: uppercase;
+      font-weight: $regular;
+      line-height: 3.36rem;
+      font-size: 2.8rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      color: $color-dark;
+      font-size: 1.3rem;
+      letter-spacing: .7rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &-team {
+    padding: 5rem 0;
+    background-image: url('../Images/service-details/team-bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &-img {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+
+      @include mobile {
+        border-radius: 20%;
+      }
+
+      &-hover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(235, 87%, 50%, 0.62);
+        opacity: 0;
+        transition: .3s;
+
+        i {
+          transition: .3s;
+          opacity: 0;
+          font-size: 10rem;
+          color: darken($color: $color-white, $amount: 20);
+        }
+      }
+
+      &:hover {
+        .brand-cat-team-img-hover {
+          opacity: 1;
+
+          i {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-content {
+      text-align: center;
+      padding: 1.5rem 0;
+
+      h4 {
+        font-weight: $bold;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+        line-height: 1.92rem;
+        font-family: 'Poppins';
+
+        @include mobile {
+          font-size: 1.8rem
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: $regular;
+        letter-spacing: .1rem;
+
+        @include mobile {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

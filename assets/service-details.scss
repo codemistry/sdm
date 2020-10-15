@@ -1,0 +1,256 @@
+@import 'variable', 'fonts', 'mixin', 'common', 'header', 'footer';
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px)
+  }
+
+  50% {
+    transform: translateY(10px)
+  }
+
+  100% {
+    transform: translateY(-10px)
+  }
+}
+
+@keyframes bounce-reverse {
+  0% {
+    transform: translateY(10px)
+  }
+
+  50% {
+    transform: translateY(-10px)
+  }
+
+  100% {
+    transform: translateY(10px)
+  }
+}
+
+.service-details {
+  &-top {
+    position: relative;
+    @extend %section-padding;
+    padding-bottom: 0;
+
+    @include tablet {
+      padding-bottom: 10rem;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &-img {
+      position: relative;
+      background-image: url('../Images/service-details/service-details-bg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 1133px;
+
+      @include tablet {
+        height: 856px;
+      }
+
+      &-text {
+        position: absolute;
+        right: -30%;
+        top: 5%;
+        animation: bounce 3s infinite;
+
+        @include tablet {
+          right: 0;
+        }
+
+        img {
+          height: 485px;
+          object-fit: contain;
+
+          @include tablet-landscape {
+            height: 410px;
+          }
+
+          @include tablet {
+            width: 494px;
+            height: 359px;
+          }
+        }
+      }
+
+      &-logo {
+        position: absolute;
+        bottom: 35%;
+        transform: translateX(-50%);
+        left: 50%;
+        animation: bounce-reverse 3s infinite;
+
+        @include tablet {
+          bottom: 25%;
+        }
+      }
+
+      &-details {
+        position: relative;
+        height: 100%;
+
+        .right {
+          position: absolute;
+          left: 80%;
+          z-index: 222;
+          width: max-content;
+          bottom: 25%;
+
+          @include tablet {
+            left: 70%;
+            bottom: 0;
+          }
+
+          h1 {
+            font-family: 'Poppins';
+            font-size: 16rem;
+            color: $dark-blue;
+            line-height: 15rem;
+          }
+
+          p {
+            text-transform: uppercase;
+            color: $dark-blue;
+            font-size: 1.6rem;
+            font-weight: $bold;
+          }
+        }
+
+        .left {
+          position: absolute;
+          left: 20%;
+          z-index: 222;
+          width: max-content;
+          bottom: 7%;
+          text-align: right;
+
+          @include tablet {
+            left: 15%;
+            bottom: -7%;
+          }
+
+          h3 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: $regular;
+            letter-spacing: .3rem;
+            margin-bottom: 3rem;
+          }
+
+          p {
+            font-size: 1.5rem;
+            font-weight: $regular;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  &-title {
+    padding: 5rem;
+    text-align: center;
+
+    h3 {
+      color: $dark-blue;
+      letter-spacing: .5rem;
+      text-transform: uppercase;
+      font-weight: $regular;
+      line-height: 3.36rem;
+      font-size: 2.8rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      color: $color-dark;
+      font-size: 1.3rem;
+      letter-spacing: .7rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &-team {
+    padding: 5rem 0;
+    background-image: url('../Images/service-details/team-bg.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &-img {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+
+      @include mobile {
+        border-radius: 20%;
+      }
+
+      &-hover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsla(235, 87%, 50%, 0.62);
+        opacity: 0;
+        transition: .3s;
+
+        i {
+          transition: .3s;
+          opacity: 0;
+          font-size: 10rem;
+          color: darken($color: $color-white, $amount: 20);
+        }
+      }
+
+      &:hover {
+        .service-details-team-img-hover {
+          opacity: 1;
+
+          i {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-content {
+      text-align: center;
+      padding: 1.5rem 0;
+
+      h4 {
+        font-weight: $bold;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+        line-height: 1.92rem;
+        font-family: 'Poppins';
+
+        @include mobile {
+          font-size: 1.8rem
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: $regular;
+        letter-spacing: .1rem;
+
+        @include mobile {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

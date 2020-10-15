@@ -1,0 +1,118 @@
+@import 'variable';
+@import 'mixin';
+
+html {
+  font-size: 62.5%;
+
+  @include tablet {
+    font-size: 56.25%;
+  }
+
+  @include mobile {
+    font-size: 50%;
+  }
+}
+
+
+
+h1 {
+  @extend %font-secondary;
+}
+
+h2 {
+  @extend %font-secondary;
+}
+
+h3 {
+  @extend %font-secondary;
+}
+
+h4 {
+  @extend %font-secondary;
+}
+
+h5 {
+  @extend %font-secondary;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+%block {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+%before-after {
+  position: absolute;
+  content: '';
+}
+
+%section-padding {
+  padding: 10rem 0;
+}
+
+.sdm-btn {
+  padding: 10px 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: $light;
+  border: 1px solid transparent;
+  margin-right: 5px;
+  color: $color-white;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+
+  h3 {
+    font-size: 28px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: $regular;
+    color: $dark-blue;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-weight: $light;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+  }
+}
+
+.brand-cat-title {
+  padding: 5rem;
+  text-align: center;
+
+  h3 {
+    font-family: $primary-font;
+    color: dark-blue;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 3.36rem;
+    font-size: 2.8rem;
+    margin: 1rem 0;
+  }
+
+  p {
+    color: $color-dark;
+    font-size: 1.3rem;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+  }
+}
+

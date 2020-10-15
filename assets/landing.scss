@@ -1,0 +1,595 @@
+@import 'variable', 'fonts', 'mixin', 'common', 'header', 'footer';
+
+
+
+.landing {
+  &-top {
+    z-index: 1;
+    position: sticky;
+
+    .bg-video {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      z-index: 1;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h3 {
+          font-size: 4rem;
+          text-transform: uppercase;
+          letter-spacing: .2rem;
+          color: $color-white;
+        }
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: $dark-blue;
+        opacity: .2;
+        z-index: 1;
+      }
+    }
+  }
+
+  &-banner {
+    position: relative;
+    z-index: 9999;
+
+    &-img {
+      position: relative;
+      width: 80%;
+      z-index: 9999;
+
+      &-right {
+        width: 80%;
+      }
+    }
+
+    &-main {
+      text-align: center;
+
+      h3 {
+        font-size: 5.3rem;
+        letter-spacing: 1.2rem;
+        font-weight: $light;
+        font-family: $primary-font;
+        color: $dark-blue
+      }
+
+      p {
+        font-size: 1.3rem;
+        letter-spacing: 1.2rem;
+        font-weight: $light;
+        margin: 1rem 0;
+      }
+    }
+
+    .floated-btn {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 50%;
+
+      button {
+        display: flex;
+        background-color: $color-orange;
+        color: #161b3c;
+        padding: 1rem 2.5rem 1rem 5rem;
+        justify-content: center;
+        border: 0.1rem solid $color-orange;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-weight: 600;
+        align-items: center;
+        position: relative;
+        transition: .3s;
+
+        &:focus {
+          outline: none;
+        }
+
+        img {
+          width: 3.5rem;
+          margin-left: 2.5rem;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &-about {
+    @extend %section-padding;
+    background-image: url('../Images/landing/landing-about-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+
+    &-content {
+      color: $color-white;
+      text-align: center;
+
+      i {
+        margin-bottom: 1.5rem;
+        font-size: 4rem;
+      }
+
+      h4 {
+        font-size: 2.5rem;
+        letter-spacing: 1.5rem;
+        font-weight: $regular;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+        font-family: $primary-font;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.9rem;
+        margin-bottom: 5rem;
+        color: darken($color: $color-white, $amount: 40);
+      }
+
+      button {
+        text-transform: uppercase;
+        background-color: transparent;
+        border: .1rem solid $color-orange;
+        color: $color-orange;
+        padding: 1rem 3rem;
+        font-weight: $semi-bold;
+        position: relative;
+        z-index: 1;
+        font-family: $primary-font;
+        letter-spacing: .2rem;
+        overflow: hidden;
+        transition: .3s;
+
+        &::before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: -100%;
+          background-color: $color-orange;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          transition: .3s;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          color: $dark-blue;
+
+          &::before {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-service {
+    @extend %section-padding;
+    background-color: #f6f6f6;
+
+    .landing-service {
+
+      &-top,
+      &-bottom {
+        padding: 0 20%;
+        background-color: $color-white;
+        height: 45rem;
+        padding-top: 3.5rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        .title {
+          margin-bottom: 30px;
+
+          h3 {
+            font-family: $primary-font;
+            font-weight: $light;
+            font-style: normal;
+            text-align: center;
+            color: $dark-blue;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+          }
+        }
+
+        .des {
+          margin-bottom: 2rem;
+
+          p {
+            font-weight: $regular;
+            text-align: center;
+            color: $dark-blue;
+          }
+        }
+      }
+
+      &-img {
+        margin: 0 -20%;
+      }
+
+      &-bottom {
+        padding: 3.5rem;
+        height: 30rem;
+        margin-top: 3rem;
+
+        .title {
+          h3 {
+            font-size: 3.5rem;
+            text-align: left;
+          }
+        }
+
+        .des {
+          p {
+            text-align: left;
+            margin: 0;
+            line-height: 1.8;
+          }
+        }
+
+        &.right {
+          background-color: $dark-blue;
+
+          .title {
+            h3 {
+              color: $color-orange;
+            }
+          }
+
+          .des {
+            p {
+              color: lighten($color: $color-dark, $amount: 25);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-members {
+    background-color: #f6f6f6;
+
+    &-bg {
+      padding-top: 7rem;
+      background-image: url('../Images/landing/landing-slider-bg.jpg');
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      background-attachment: fixed;
+      position: relative;
+
+      .team {
+        &-content {
+          .title {
+            h3 {
+              font-size: 5rem;
+              color: $color-white;
+              text-transform: uppercase;
+              font-family: $primary-font;
+              font-weight: $light;
+            }
+          }
+
+          .des {
+            p {
+              font-size: 1.8rem;
+              color: $color-orange;
+
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      margin-left: auto;
+      width: 20rem;
+      column-gap: 10rem;
+
+      .text {
+        p {
+          color: $color-white;
+          font-size: 1.3rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      text-align: right;
+
+      &-bullet {
+        width: 1rem;
+        height: 1rem;
+        background-color: $color-orange;
+        opacity: .2;
+        margin: 0 1rem;
+
+        &:focus {
+          outline: none;
+        }
+
+        &-active {
+          opacity: .7;
+          background-color: $color-orange
+        }
+      }
+    }
+  }
+
+  &-floated {
+    background-image: url('../Images/landing/floated-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 6rem 0;
+
+    &-top,
+    &-bottom {
+
+      &-left,
+      &-right,
+      &-center {
+        width: 16%;
+        position: absolute;
+      }
+    }
+
+    &-top {
+      &-left {
+        left: 0;
+        top: 0;
+      }
+    }
+
+    &-top {
+      &-right {
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &-bottom {
+      &-right {
+        width: 10%;
+        transform: rotate(10deg);
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &-bottom {
+      &-left {
+        left: 0;
+        bottom: 0;
+      }
+
+      &-center {
+        right: 0;
+        bottom: 40%;
+      }
+    }
+
+    &-center {
+      margin: auto;
+      width: 50%;
+    }
+  }
+
+  &-blog {
+    background-color: #f6f6f6;
+    position: relative;
+
+    &-floated {
+      width: 15rem;
+      position: absolute;
+      top: -65%;
+    }
+
+    &-wrapper {
+      margin-top: 6rem;
+    }
+
+    &-single {
+      background-color: $color-white;
+      margin-bottom: 3rem;
+      padding: 2rem 3.5rem 1.5rem;
+
+      &-top {
+        text-align: left;
+        margin-bottom: 1.5rem;
+
+        i {
+          font-size: 2rem;
+          color: $color-orange;
+        }
+      }
+
+      &-title {
+        padding: 1.5rem 0;
+        display: inline-block;
+        border-bottom: 0.2rem solid $dark-blue;
+
+        a {
+          color: $dark-blue;
+          text-decoration-color: $color-orange;
+
+          h1 {
+            font-family: $primary-font;
+            line-height: 1.4;
+            text-transform: uppercase;
+            font-weight: $regular;
+            font-size: 2.4rem;
+          }
+        }
+      }
+
+      &-bottom {
+        ul {
+          padding: 1.5rem 0;
+          margin-bottom: 0;
+
+          li {
+            &:first-child {
+              a {
+                color: $color-orange;
+              }
+            }
+
+            &:last-child {
+              a {
+                color: $dark-blue;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-deals {
+    background-image: url('../Images/landing/landing-slider-bg.jpg');
+    width: 100%;
+    height: 80vh;
+    padding: 4rem 0;
+    background-repeat: no-repeat;
+
+    &-left {
+      h1 {
+        font-family: $primary-font;
+        font-size: 25.8rem;
+        font-weight: 900;
+        color: $color-orange;
+        word-break: break-all;
+        line-height: .75;
+        text-transform: uppercase;
+        letter-spacing: -1.5rem;
+      }
+
+      h3 {
+        color: $color-white;
+        font-weight: 900;
+        letter-spacing: -2px;
+        font-size: 40px;
+        line-height: 48px;
+        margin: 20px 0px 10px;
+        text-align: left;
+        text-transform: uppercase;
+      }
+    }
+
+    &-center {
+      h1 {
+        font-size: 30.2rem;
+        color: $color-white;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-sales {
+    padding: 4rem 0;
+    background-color: #f6f6f6;
+
+    .row {
+      box-shadow: 1px 8px 20rem 1rem rgba(0, 0, 0, 0.06);
+    }
+
+    .corner {
+      background-color: $color-orange;
+      padding: 1rem 0 .1rem 0;
+      width: 100%;
+      position: absolute;
+      left: -8.3rem;
+      top: -.6rem;
+      transform: rotate(-45deg);
+      text-align: center;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+
+      p {
+        font-size: 1.5rem;
+        color: $color-white;
+        margin: 0;
+        line-height: 2.7rem;
+        font-weight: $bold;
+      }
+    }
+
+    &-single {
+      display: block;
+      padding: 5rem 2rem 0;
+      background-color: $color-white;
+      border: 1px solid #f6f6f6;
+      position: relative;
+      text-decoration: none;
+      overflow: hidden;
+
+      &-logo {
+        width: 10rem;
+        margin: auto;
+        margin-bottom: 1.5rem;
+        height: 20rem;
+
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &-bottom {
+        padding: 0 0 2rem 0;
+
+        p {
+          margin-bottom: 0;
+          color: $dark-blue;
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        background-color: $color-orange;
+        text-decoration: none;
+
+        .landing-sales-single-bottom {
+          p {
+            color: $color-white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

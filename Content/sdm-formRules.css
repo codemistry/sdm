@@ -1,0 +1,97 @@
+.contact-form {
+  position: relative;
+}
+
+.contact-form label::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.contact-form input {
+  position: relative;
+  z-index: 2;
+}
+
+label {
+  color: #4a4a4a;
+  display: block;
+  letter-spacing: 0.015em;
+  padding-bottom: 0.25em;
+  padding-left: 0.25em;
+  text-align: left;
+
+}
+
+.input-hint {
+  display: block;
+  font-size: 80%;
+  line-height: 1.4;
+  margin-top: 0.15em;
+  padding-left: 0.25em;
+  text-align: left;
+}
+
+input {
+  /*background: #fff;
+  background: linear-gradient(0deg, #fff 93%, #e0e0e0 100%);
+  border: 1px solid #999;
+  border-radius: 0.3em;
+  display: block;
+  line-height: 1;
+  padding: 0.75em 0.75em 0.6em 0.75em;
+  width: 100%;*/
+  text-align: left !important;
+}
+
+input:hover,
+input:active {
+  border-color: #EDEDED;
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #cccccc;
+  outline: none;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+textarea {
+  text-align: left !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+samp {
+  background-color: #ededed;
+  border: 2px solid #ededed;
+  border-radius: 0.2em;
+  margin-left: 0.15em;
+  margin-right: 0.05em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  speak: digits;
+  word-break: break-word;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+abbr {
+  font-style: italic;
+  font-weight: 100;
+}

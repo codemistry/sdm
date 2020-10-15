@@ -1,0 +1,118 @@
+@import 'variable', 'fonts', 'mixin', 'common', 'header', 'footer';
+
+.error {
+  @extend %section-padding;
+  position: relative;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  &::before {
+    @extend %before-after;
+    background-image: url('../Images/bg-1.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    z-index: -1;
+    left: 0;
+  }
+
+  &-img {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &-code {
+    margin-bottom: 1rem;
+
+    h1 {
+      font-size: 10rem;
+      color: $color-orange;
+      font-weight: $bold;
+      margin: 0;
+      @extend %font-secondary;
+
+      @include tablet-landscape {
+        font-size: 7rem;
+      }
+
+      @include tablet {
+        font-size: 6rem;
+      }
+    }
+  }
+
+  &-ques {
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 5rem;
+      font-weight: $semi-bold;
+      color: $dark-blue;
+
+      @include tablet-landscape {
+        font-size: 4rem;
+      }
+
+      @include tablet {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &-des {
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 4rem;
+      color: $color-dark;
+
+      @include tablet-landscape {
+        font-size: 3rem;
+      }
+
+      @include tablet {
+        font-size: 2rem;
+      }
+
+      i {
+        color: $color-orange;
+      }
+    }
+  }
+
+  &-btn {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    transition: .3s;
+    color: $color-orange;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: $bold;
+
+    @include tablet {
+      font-size: 1.4rem;
+    }
+
+    i {
+      margin-right: 0.5rem;
+      transition: .3s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $color-orange2;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+
+
+  }
+}

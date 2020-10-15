@@ -1,0 +1,53 @@
+// @font-face {
+//   font-family: 'Oswald', sans-serif;
+//   src: url('../Fonts/oswald/Oswald-Light.ttf');
+//   font-weight: $light;
+// }
+
+// @font-face {
+//   font-family: 'Oswald', sans-serif;
+//   src: url('../Fonts/oswald/Oswald-Medium.ttf');
+//   font-weight: $semi-bold;
+// }
+
+// @font-face {
+//   font-family: 'Oswald', sans-serif;
+//   src: url('../Fonts/oswald/Oswald-Regular.ttf');
+//   font-weight: $regular;
+// }
+
+// @font-face {
+//   font-family: 'Oswald', sans-serif;
+//   src: url('../Fonts/oswald/Oswald-SemiBold.ttf');
+//   font-weight: $bold;
+// }
+
+// @font-face {
+//   font-family: 'Poppins', sans-serif;
+//   src: url('/Fonts/poppins/Poppins-Light.ttf');
+//   font-weight: $light;
+// }
+
+// @font-face {
+//   font-family: 'Poppins', sans-serif;
+//   src: url('/Fonts/poppins/Poppins-Medium.ttf');
+//   font-weight: $semi-bold;
+// }
+
+// @font-face {
+//   font-family: 'Poppins', sans-serif;
+//   src: url('/Fonts/poppins/Poppins-Regular.ttf');
+//   font-weight: $regular;
+// }
+
+// @font-face {
+//   font-family: 'Poppins', sans-serif;
+//   src: url('/Fonts/poppins/Poppins-SemiBold.ttf');
+//   font-weight: $bold;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+%font-secondary {
+  font-family: 'Oswald', sans-serif;
+}
