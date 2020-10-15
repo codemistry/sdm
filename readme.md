@@ -1,5 +1,5 @@
 # SDM (WIP)
 
 ## Things to do
-[x] Add header
-[ ] Make Header responsive 
+- [x] Add header
+- [ ] Make Header responsive 
