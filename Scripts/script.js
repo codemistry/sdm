@@ -57,7 +57,6 @@ $(function () {
         dataItem = $(this).data().source;
         $('.mobile-nav').removeClass('active')
         $('.mobile-nav[data-item="' + dataItem + '"]').addClass('active');
-        console.log($(this).find('.menu-title'))
     });
     $(document).on('click', '.close-btn', function () {
         $('.mobile-nav-third-level').removeClass('active')
@@ -65,26 +64,34 @@ $(function () {
 
     });
 
-    $(document).on('click', '.mob-menu-text', function () {
+    $(document).on('click', '.mob-menu-content', function () {
+        $(this).children('.mob-menu-text')[0].click();
+    });
+
+    $(document).on('click', '.mob-menu-text, .menu-trigger', function () {
         dataView = $(this).data().view;
-        $('.mobile-nav-third-level[data-view="' + dataView + '"]').addClass('active');
-        $('.menu-title-third-level').text(dataView);
-        $('.item-model').text(dataView);
+        console.log(dataView);
+        if ($(this).children('a').attr('href') == '#') {
+            $('.mobile-nav-third-level[data-view="' + dataView + '"]').addClass('active');
+            $('.menu-title-third-level').text(dataView);
+            $('.item-model').text(dataView);
+        } else {
+            $(this).children('a')[0].click();
+        }
     });
 
     $(document).on('click', '.back', function () {
         $('.mobile-nav-third-level').removeClass('active');
     })
 });
-
 // Masonary Layout About Page
-$(document).ready(function(){
-    $('.pop').each(function() { // the containers for all your galleries
+$(document).ready(function () {
+    $('.pop').each(function () { // the containers for all your galleries
         $(this).magnificPopup({
             delegate: 'a', // the selector for gallery item
             type: 'image',
             gallery: {
-              enabled:true
+                enabled: true
             }
         });
     });
