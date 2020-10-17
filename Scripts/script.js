@@ -84,6 +84,7 @@ $(function () {
         $('.mobile-nav-third-level').removeClass('active');
     })
 });
+
 // Masonary Layout About Page
 $(document).ready(function () {
     $('.pop').each(function () { // the containers for all your galleries

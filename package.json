@@ -4,7 +4,7 @@
   "description": "## Things to do - [x] Add header - [ ] Make Header responsive",
   "main": "index.js",
   "scripts": {
-    "sass": "sass assets/style.scss ./Content/style.css --watch",
+    "sass": "sass --watch assets/about.scss:Content/about.css assets/brand-categories.scss:Content/brand-categories.css assets/brand-details.scss:Content/brand-details.css assets/contact.scss:Content/contact.css assets/error.scss:Content/error.css assets/get-started.scss:Content/get-started.css assets/landing.scss:Content/landing.css assets/privacy.scss:Content/privacy.css assets/service-cat.scss:Content/service-cat.css assets/service-details.scss:Content/service-details.css assets/subscribe.scss:Content/subscribe.css",
     "serve": "live-server"
   },
   "repository": {

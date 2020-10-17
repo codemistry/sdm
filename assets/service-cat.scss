@@ -137,12 +137,14 @@
 
       p {
         font-weight: $semi-bold;
-        font-size: 3.2rem;
-        @extend %font-secondary;
+        font-size: 4rem;
+        font-family: $primary-font;
+        line-height: 1.4;
+        font-weight: $bold;
       }
 
       i {
-        font-size: 3.2rem;
+        font-size: 4rem;
       }
     }
 
@@ -160,10 +162,12 @@
     .dark-text {
       p {
         color: $color-dark;
+        font-size: 3.2rem;
       }
 
       i {
         color: $color-dark;
+        font-size: 3.2rem;
       }
     }
 

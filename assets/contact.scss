@@ -441,6 +441,7 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+
             @include tablet {
               font-size: 1.6rem;
               padding: 1rem 2rem
@@ -608,6 +609,10 @@
               @include mobile {
                 font-size: 1.6rem;
               }
+            }
+
+            .top {
+              bottom: 100%;
             }
 
             input {

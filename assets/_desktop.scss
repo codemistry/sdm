@@ -29,7 +29,7 @@ body {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-
+    overflow-x: hidden !important;
 }
 
 a {
@@ -242,6 +242,7 @@ a {
 
             a {
                 overflow: hidden;
+                color: $color-dark;
 
                 &::before {
                     position: absolute;
